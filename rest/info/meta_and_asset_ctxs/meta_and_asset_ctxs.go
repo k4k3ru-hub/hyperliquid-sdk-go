@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/k4k3ru-hub/go/hyperliquid/rest"
+	"github.com/k4k3ru-hub/hyperliquid-sdk-go/rest"
 )
 
 

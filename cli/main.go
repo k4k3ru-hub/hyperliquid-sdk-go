@@ -6,7 +6,7 @@ package main
 import (
 	"fmt"
 
-	myCliRestMetaAndAssetCtxs "github.com/k4k3ru-hub/go/hyperliquid/cli/rest/meta_and_asset_ctxs"
+	myCliRestMetaAndAssetCtxs "github.com/k4k3ru-hub/hyperliquid-sdk-go/cli/rest/meta_and_asset_ctxs"
 
 	"github.com/k4k3ru-hub/go/cli"
 )

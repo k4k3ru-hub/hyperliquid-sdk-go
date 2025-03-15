@@ -1,4 +1,4 @@
-module github.com/k4k3ru-hub/go/hyperliquid
+module github.com/k4k3ru-hub/hyperliquid-sdk-go
 
 go 1.21.6
 

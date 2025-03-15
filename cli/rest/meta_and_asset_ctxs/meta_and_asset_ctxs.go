@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	myRest "github.com/k4k3ru-hub/go/hyperliquid/rest"
-	myRestInfoMetaAndAssetCtxs "github.com/k4k3ru-hub/go/hyperliquid/rest/info/meta_and_asset_ctxs"
+	myRest "github.com/k4k3ru-hub/hyperliquid-sdk-go/rest"
+	myRestInfoMetaAndAssetCtxs "github.com/k4k3ru-hub/hyperliquid-sdk-go/rest/info/meta_and_asset_ctxs"
 
 	"github.com/k4k3ru-hub/go/cli"
 )

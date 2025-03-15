@@ -1,6 +1,6 @@
-# Hyperliquid Utility for Go
+# Hyperliquid SDK for Go
 
-[![License](https://img.shields.io/github/license/your-username/hyperliquid-go)](./LICENSE)
+[![License](https://img.shields.io/github/license/k4k3ru-hub/hyperliquid-sdk-go)](./LICENSE)
 
 This is a Go library for interacting with Hyperliquid, providing convenient utilities for developers building applications with Hyperliquid's API.
 
@@ -17,12 +17,15 @@ This is a Go library for interacting with Hyperliquid, providing convenient util
 ### CLI
 
 ```
-git clone 
+git clone https://github.com/k4k3ru-hub/hyperliquid-sdk-go.git
+cd hyperliquid-sdk-go
 go build -o build/hyperliquid-cli cli/main.go
 ```
 
+### Module
+
 ```
-import "github.com/k4k3ru-hub/go/hyperliquid"
+import "github.com/k4k3ru-hub/go/hyperliquid-sdk-go"
 ```
 
 
