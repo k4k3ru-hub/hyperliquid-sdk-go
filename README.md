@@ -32,12 +32,30 @@ import "github.com/k4k3ru-hub/hyperliquid-sdk-go"
 
 ## Usage
 
-In Progress...
+Currently supported features:
+  REST:
+    metaAndAssetCtxs: Retrieve perpetuals asset contexts (includes mark price, current funding, open interest, etc.)
+  WebSocket:
+    Under development...
 
 
-## Configuration
+### Using as a CLI
 
-In Progress...
+Hyperliquid SDK for Go can be executed as a CLI command.
+
+REST:
+  metaAndAssetCtxs: `./build/hyperliquid-cli rest metaAndAssetCtxs`
+
+
+### Using as a Go Module
+
+The SDK can also be imported and used as a Go module.
+
+1. Install the package
+
+```
+go get github.com/k4k3ru-hub/hyperliquid-sdk-go
+```
 
 
 ## Support me
