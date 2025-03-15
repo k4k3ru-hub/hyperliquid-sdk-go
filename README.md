@@ -57,6 +57,22 @@ The SDK can also be imported and used as a Go module.
 go get github.com/k4k3ru-hub/hyperliquid-sdk-go
 ```
 
+2. Import the package for the function you want to use.
+
+- REST:
+  - metaAndAssetCtxs: `import "github.com/k4k3ru-hub/hyperliquid-sdk-go/rest/info/meta_and_asset_ctxs"`
+
+3. Initialize the client for the function you want to use.
+
+- REST:
+  - metaAndAssetCtxs: `c := meta_and_asset_ctxs.NewMetaAndAssetCtxsClient()`
+
+4. Send a API request.
+
+```go
+result, err := c.Send()
+```
+
 
 ## Support me
 I am a Japanese developer, and your support is a great encouragement for my work!
