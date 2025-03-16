@@ -8,7 +8,7 @@ import (
 
 	myCliRestMetaAndAssetCtxs "github.com/k4k3ru-hub/hyperliquid-sdk-go/cli/rest/meta_and_asset_ctxs"
 
-	"github.com/k4k3ru-hub/go/cli"
+	"github.com/k4k3ru-hub/cli-go"
 )
 
 

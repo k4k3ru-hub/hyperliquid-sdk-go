@@ -11,7 +11,7 @@ import (
 	myRest "github.com/k4k3ru-hub/hyperliquid-sdk-go/rest"
 	myRestInfoMetaAndAssetCtxs "github.com/k4k3ru-hub/hyperliquid-sdk-go/rest/info/meta_and_asset_ctxs"
 
-	"github.com/k4k3ru-hub/go/cli"
+	"github.com/k4k3ru-hub/cli-go"
 )
 
 
