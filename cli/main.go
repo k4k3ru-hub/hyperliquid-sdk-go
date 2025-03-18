@@ -6,6 +6,7 @@ package main
 import (
 	"fmt"
 
+	myCliRestAllMids          "github.com/k4k3ru-hub/hyperliquid-sdk-go/cli/rest/all_mids"
 	myCliRestMetaAndAssetCtxs "github.com/k4k3ru-hub/hyperliquid-sdk-go/cli/rest/meta_and_asset_ctxs"
 
 	"github.com/k4k3ru-hub/cli-go"
@@ -31,6 +32,11 @@ func main() {
 	restCommand := cli.NewCommand(RestCommandName)
 	restCommand.Usage = RestCommandUsage
 	myCli.Command.Commands = append(myCli.Command.Commands, restCommand)
+
+	// Add `rest allMids` command.
+	myCliRestAllMids.SetCommand(restCommand)
+
+	// Add `rest metaAndAssetCtxs` command.
 	myCliRestMetaAndAssetCtxs.SetCommand(restCommand)
 
 	// Run the CLI.

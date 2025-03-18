@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"net/http"
 
+	"github.com/k4k3ru-hub/hyperliquid-sdk-go/constant"
 	"github.com/k4k3ru-hub/hyperliquid-sdk-go/rest"
 )
 
@@ -20,37 +21,37 @@ type MetaAndAssetCtxs struct {
 	Universe []*UniverseEntry `json:"universe"`
 	Assets   []*AssetEntry    `json:"assets"`
 }
-type MetaAndAssetCtxsClient struct {
+type Client struct {
 	*rest.Client
 }
 type UniverseEntry struct {
 	Name         string `json:"name"`
 	SzDecimals   int    `json:"szDecimals"`
 	MaxLeverage  int    `json:"maxLeverage"`
-	OnlyIsolated bool   `json:"onlyIsolated,omitempty"`
+	OnlyIsolated bool   `json:"onlyIsolated"`
 }
 type AssetEntry struct {
-	DayNtlVlm   string    `json:"dayNtlVlm"`
-	Funding     string    `json:"funding"`
-	ImpactPxs   []string  `json:"impactPxs"`
-	MarkPx      string    `json:"markPx"`
-	MidPx       string    `json:"midPx"`
+	DayNtlVlm    string   `json:"dayNtlVlm"`
+	Funding      string   `json:"funding"`
+	ImpactPxs    []string `json:"impactPxs"`
+	MarkPx       string   `json:"markPx"`
+	MidPx        string   `json:"midPx"`
 	OpenInterest string   `json:"openInterest"`
-	OraclePx    string    `json:"oraclePx"`
-	Premium     string    `json:"premium"`
-	PrevDayPx   string    `json:"prevDayPx"`
+	OraclePx     string   `json:"oraclePx"`
+	Premium      string   `json:"premium"`
+	PrevDayPx    string   `json:"prevDayPx"`
 }
 
 
 //
-// New MetaAndAssetCtxsClient.
+// New Client.
 //
-func NewMetaAndAssetCtxsClient() *MetaAndAssetCtxsClient {
+func NewClient() *Client {
 	// New Client.
 	client := rest.NewClient()
 
 	// Set Endpoint URL.
-	client.EndpointUrl = rest.BaseUrl + rest.ApiEndpointInfo
+	client.EndpointUrl = constant.BaseUrlRest + constant.ApiEndpointInfo
 
 	// Set HTTP method.
 	client.HttpMethod = http.MethodPost
@@ -60,7 +61,7 @@ func NewMetaAndAssetCtxsClient() *MetaAndAssetCtxsClient {
         Type: TypeValue,
     }
 
-	return &MetaAndAssetCtxsClient{
+	return &Client{
 		Client: client,
 	}
 }
@@ -87,7 +88,7 @@ func (object *MetaAndAssetCtxs) GetAssetByName(name string) *AssetEntry {
 //
 // Send a request.
 //
-func (c *MetaAndAssetCtxsClient) Send() (*MetaAndAssetCtxs, error) {
+func (c *Client) Send() (*MetaAndAssetCtxs, error) {
 	// Send a request.
 	resBody, err := c.Client.Send()
 	if err != nil {

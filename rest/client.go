@@ -10,6 +10,8 @@ import (
 	"io"
 	"net/http"
 	"time"
+
+	"github.com/k4k3ru-hub/hyperliquid-sdk-go/constant"
 )
 
 
@@ -67,7 +69,7 @@ func (c *Client) Send() ([]byte, error) {
 	}
 
 	// Set `Content-Type` header.
-	req.Header.Set("Content-Type", ContentType)
+	req.Header.Set("Content-Type", constant.ContentTypeJson)
 
 	resp, err := c.HttpClient.Do(req)
 	if err != nil {
