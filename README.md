@@ -74,6 +74,11 @@ result, err := c.Send()
 ```
 
 
+## References
+
+- [Hyperliquid Docs](https://hyperliquid.gitbook.io/hyperliquid-docs)
+
+
 ## Support me
 I am a Japanese developer, and your support is a great encouragement for my work!
 In addition to support, feel free to reach out with comments, feature requests, or development inquiries!
